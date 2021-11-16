@@ -3,40 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help The Ocean</title>
-</head>¨
+    <title>ZOO</title>
+</head>
 <link rel="stylesheet" href="./main.css">
 <body>
-    <div class="container">
-        <header>
-            <nav>
-                <h1>Save The Turtles</h1>
-                <ul>
-                    <li><a href="#">Save Them!</a></li>
-                    <li><a href="#">Map</a></li>
-                    <li><a href="#">Donate</a></li>
-                </ul>
-            </nav>
-        </header>
-    
-        <main>
-            <div class="carousel"> 
-    
+    <!-- <header> -->
+
+        <div class="carousel-container">
+
+            <div class="slide fade">
+                <img src="./images/Carousel1.jpg" alt="zoo giraffes">
             </div>
-    
-            <div class="description">
-    <!-- https://saveturtles.org/ -->
+
+            <div class="slide fade">
+                <img src="./images/Carousel2.jpg" alt="zoo elephants">
             </div>
-    
-            <div class="map">
-    
+            
+            <div class="slide fade">
+                <img src="./images/Carousel3.jpg" alt="zoo tiger">
             </div>
+
+        </div>
+
+        <img class="logo" src="./images/logo.png" alt="zoo logo">
+
+        <nav class="sticky">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Map</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Donate</a></li>
+            </ul>
+        </nav>
+    <!-- </header> -->
+
     
-            <div class="donate">
-    
-            </div>
-        </main>
-    </div>
-    
+
+    <main>
+        
+
+        <div class="description container">
+    <!-- https://www.houstonzoo.org/ -->
+        </div>
+
+        <div class="map">
+
+        </div>
+
+        <div class="donate container">
+
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var slideIndex = 0;
+        carousel();
+
+        function carousel() {
+          var i;
+          var slides = document.getElementsByClassName("slide");
+        
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+
+          slides[slideIndex-1].style.display = "block";  
+
+          setTimeout(carousel, 6000); // Change image every 6 seconds
+        }
+    </script>
+
 </body>
 </html>
