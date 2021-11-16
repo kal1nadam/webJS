@@ -13,16 +13,31 @@
 
             <div class="slide fade">
                 <img src="./images/Carousel1.jpg" alt="zoo giraffes">
+                <div class="jumbotron">
+                    <h1>Holiday Gift Guide</h1>
+                    <p>Give your friends and family a gift from the Zoo!</p>
+                    <a href="#">Shop Now</a>
+                </div>
             </div>
 
             <div class="slide fade">
                 <img src="./images/Carousel2.jpg" alt="zoo elephants">
+                <div class="jumbotron">
+                    <h1>12th Aniversary Event</h1>
+                    <p>Get your tickets with 12% off!</p>
+                    <a href="#">Buy Tickets</a>
+                </div>
             </div>
             
             <div class="slide fade">
                 <img src="./images/Carousel3.jpg" alt="zoo tiger">
+                <div class="jumbotron">
+                    <h1>See them. Save them.</h1>
+                    <p>Your visit to the Zoo helps save animals in the wild!</p>
+                    <a href="#">Save Wildlife</a>
+                </div>
             </div>
-
+            
         </div>
 
         <img class="logo" src="./images/logo.png" alt="zoo logo">
@@ -73,7 +88,7 @@
         function carousel() {
           var i;
           var slides = document.getElementsByClassName("slide");
-        
+
           for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";  
           }

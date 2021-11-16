@@ -53,6 +53,7 @@ nav li{
 nav ul a{
     text-decoration: none;
     color: white;
+    font-size: 1.5em;
 }
 
 
@@ -60,10 +61,49 @@ nav ul a{
 .logo{
     position: absolute;
     z-index: 100;
-    top: 5em;
-    right: 20em;
-    width: 20em;
+    top: 3em;
+    right: 5em;
+    width: 30em;
 }
+
+.jumbotron{
+    position: absolute;
+    top: 25em;
+    left: 5em;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2em;
+    padding: 3em;
+}
+
+.jumbotron h1{
+    font-size:4em;
+    margin-bottom: 0;
+    border-bottom: solid;
+}
+
+.jumbotron p{
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.jumbotron a{
+    text-decoration: none;
+    color: black;
+    border-radius: 1em;
+    background-color: white;
+    padding: 0.8em;
+    font-weight: 900;
+    transition: all 0.3s ease;
+}
+
+.jumbotron a:hover{
+    background-color: rgb(5, 105, 163);
+    color: white;
+}
+
+
+
+
 
 
 
