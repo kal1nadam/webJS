@@ -7,7 +7,7 @@
 </head>
 <link rel="stylesheet" href="./main.css">
 <body>
-    <!-- <header> -->
+    <!-- <header> sticky nav does not work -->
 
         <div class="carousel-container">
 
@@ -44,10 +44,10 @@
 
         <nav class="sticky">
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Map</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Donate</a></li>
+                <li><a class="about" href="#">About</a></li>
+                <li><a class="map" href="#">Map</a></li>
+                <li><a class="donate" href="#">Donate</a></li>
+                <li><a class="gallery" href="#">Gallery</a></li>
             </ul>
         </nav>
     <!-- </header> -->
@@ -57,8 +57,64 @@
     <main>
         
 
-        <div class="description container">
-    <!-- https://www.houstonzoo.org/ -->
+        <div class="aboutinfo">
+            <div class="first container">
+    
+                <h1 class="abouttitle">for wildlife. for all.</h1>
+
+                <div class="vision">
+                    <h2>our vision</h2>
+                    <p>Inspire communities to create environments where wildlife will thrive in our urbanizing world.</p>
+                </div>
+    
+                <div class="mission">
+                    <h2>our mission</h2>
+                    <p>Lincoln Park Zoo is dedicated to connecting people with nature by providing a free, family-oriented wildlife experience in the heart of Chicago and by advancing the highest quality of animal care, education, science, and conservation.</p>
+                </div>
+    
+                <div class="promise">
+                    <h2>our promise</h2>
+                    <p>We are committed to creating an environment that is inclusive and welcoming. We celebrate the diverse qualities, perspectives, values and experiences of all people, including our guests, volunteers, and staff. For Wildlife. For All.</p>
+                </div>
+                <p class="aboutendtitle">Everthing we do is rooted in our mission, to connect people with nature.</p>
+            </div>
+            
+
+            <div class="second">
+                <h1>Our Core Commitments</h1>
+
+                <div class="commitments">
+
+                    <!-- <div class="care commitment"> -->
+                        <img class="commimage commimagecare" src="./images/aboutCare.jpg" alt="little bird feeding">
+                        <div class="commitmentinfo commitmentinfocare">
+                            <h1>Care</h1>
+                            <p>We use science to evaluate, evolve, and improve animal care and welfare.</p>
+                            <a href="#">learn more</a>
+                        </div>
+                    <!-- </div> -->
+
+
+                    <!-- <div class="conversation commitment"> -->
+                        <img class="commimage commimageconversation" src="./images/aboutConversation.jpg" alt="flamingo">
+                        <div class="commitmentinfo commitmentinfoconversation">
+                            <h1>Conversation</h1>
+                            <p>Our team of more than 40 scientists combines fieldwork and labwork for a holistic approach to saving species around the world.</p>
+                            <a href="#">learn more</a>
+                        </div>
+                    <!-- </div> -->
+
+                    <!-- <div class="community commitment"> -->
+                        <img class="commimage commimagecommunity" src="./images/aboutCommunity.jpg" alt="teaching the childern">
+                        <div class="commitmentinfo commitmentinfocommunity">
+                            <h1>Community</h1>
+                            <p>We foster connections between people and the natural world by co-creating programs with partners in Chicago neighborhoods.</p>
+                            <a href="#">learn more</a>
+                        </div>
+                    <!-- </div> -->
+
+                </div>
+            </div>
         </div>
 
         <div class="map">
@@ -79,7 +135,7 @@
 
 
 
-
+<!-- https://www.lpzoo.org/about-the-zoo/ -->
 
     <script>
         var slideIndex = 0;

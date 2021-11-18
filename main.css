@@ -1,18 +1,23 @@
 :root{
-    --carousel-height: 50em;
+    --header-height: 100vh;
+    --nav-height: 60px;
 }
 
 .container{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 70vw;
+    width: 60vw;
 }
+
+/* header{
+    height: 100vh;
+} */
 
 body{
     margin: 0;
     padding: 0;
-    height: 1000em;
+    height: 200em;
 }
 
 html{
@@ -25,7 +30,6 @@ header{
 }
 
 nav{
-    padding: 1em 0 1em 0;
     position: -webkit-sticky; 
     position: sticky;
     top: 0;
@@ -43,17 +47,49 @@ nav ul{
     margin: 0;
     justify-content: center;
     align-items: center;
+    padding: 0;
 }
 
 nav li{
     list-style: none;
-    margin: 0 3em 0 3em;
+    text-align: center;
 }
 
 nav ul a{
     text-decoration: none;
     color: white;
     font-size: 1.5em;
+    display: flex;
+    width: 10em;
+    height: var(--nav-height);
+
+    align-items: center;
+    justify-content: center;
+    border-right: solid black;
+    border-width: 1px;
+    transition: all 0.3s ease;
+}
+
+nav li:first-child a{
+    border-left: solid black;
+    border-width: 1px;
+}
+
+.about:hover{
+    background-color: rgb(226, 228, 106);
+    color: black;
+}
+
+.map:hover{
+    background-color: rgb(50, 102, 37);
+}
+
+.donate:hover{
+    background-color: rgb(138, 106, 165);
+}
+
+.gallery:hover{
+    background-color: rgb(5, 105, 163);
 }
 
 
@@ -102,6 +138,122 @@ nav ul a{
 }
 
 
+/* #################   ABOUT  1st half ###################*/
+
+
+.aboutinfo .first{
+    display: grid;
+    grid-template-areas:"abouttitle abouttitle abouttitle"
+                        "vision . mission"
+                        "promise . mission"
+                        "aboutendtitle aboutendtitle aboutendtitle";
+
+    grid-template-columns: 48.5% 3% 48.5%;
+    grid-auto-rows: auto;
+}
+
+.aboutinfo .first h1{
+    font-size: 5em;
+    text-transform: uppercase;
+}
+
+
+.aboutinfo .first h2{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin: 0;
+    background-color: rgb(218, 218, 218);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+
+}
+.aboutinfo .first p{
+    font-size: 1.3em;
+}
+
+
+.abouttitle{
+    grid-area: abouttitle;
+}
+
+.vision{
+    grid-area: vision;
+}
+
+.mission{
+    grid-area: mission;
+}
+
+.promise{
+    grid-area: promise;
+}
+
+.aboutendtitle{
+    grid-area: aboutendtitle;
+    text-align: center;
+}
+
+
+/* ########### about 2nd half */
+
+
+.second{
+    background-color: rgb(226, 228, 106);
+    
+}
+
+
+.commitments{
+    display: grid;
+    grid-template-areas:". commimagecare comminfocare ."
+                        ". commimageconversation comminfoconversation ."
+                        ". commimagecommunity comminfocommunity .";
+
+    grid-template-columns: 15% 35% 35% 15%;
+    grid-auto-rows: auto;
+
+}
+
+.commimagecare{
+    grid-area: commimagecare;
+}
+
+.commimageconversation{
+    grid-area: commimageconversation;
+}
+
+.commimagecommunity{
+    grid-area: commimagecommunity;
+}
+
+.commitmentinfocare{
+    grid-area: comminfocare;
+}
+
+.commitmentinfoconversation{
+    grid-area: comminfoconversation;
+}
+
+.commitmentinfocommunity{
+    grid-area: comminfocommunity;
+}
+
+
+.commimage{
+    object-fit: cover;
+    object-position: center;
+}
+
+.commitmentinfo{
+    background-color: gray;
+}
+
+
+
+
+
+
 
 
 
@@ -144,7 +296,7 @@ nav ul a{
     width: 100%;
     object-fit: cover;
     object-position: center;
-    height: var(--carousel-height);
+    height: calc(var(--header-height) - var(--nav-height));
 }
 
 .fade > img{
@@ -152,7 +304,7 @@ nav ul a{
     width: 100%;
     margin: 0;
     padding: 0;
-    height: var(--carousel-height);
+    height: calc(var(--header-height) - var(--nav-height));
 }
 
 .fade {
@@ -160,6 +312,7 @@ nav ul a{
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
+    height: calc(var(--header-height) - var(--nav-height));
 }
 
 @-webkit-keyframes fade {
