@@ -155,6 +155,7 @@ nav li:first-child a{
 .aboutinfo .first h1{
     font-size: 5em;
     text-transform: uppercase;
+    margin-top: 200px;
 }
 
 
@@ -162,7 +163,9 @@ nav li:first-child a{
     font-size: 1.5em;
     text-transform: uppercase;
     margin: 0;
-    background-color: rgb(218, 218, 218);
+    display: block;
+    width: 10em;
+    background-color: rgba(231, 231, 231, 0.801);
     border-radius: 10px;
     padding: 5px;
     text-align: center;
@@ -170,6 +173,7 @@ nav li:first-child a{
 }
 .aboutinfo .first p{
     font-size: 1.3em;
+    line-height: 30px;
 }
 
 
@@ -179,14 +183,17 @@ nav li:first-child a{
 
 .vision{
     grid-area: vision;
+    margin-top: 3em;
 }
 
 .mission{
     grid-area: mission;
+    margin-top: 3em;
 }
 
 .promise{
     grid-area: promise;
+    margin-top: 9em;
 }
 
 .aboutendtitle{
@@ -199,58 +206,81 @@ nav li:first-child a{
 
 
 .second{
-    background-color: rgb(226, 228, 106);
+    background-color: rgb(8, 124, 190);
+    /* background-image: linear-gradient(white, rgb(8, 124, 190), rgb(8, 124, 190), rgb(8, 124, 190), rgb(8, 124, 190), rgb(8, 124, 190) ,rgb(8, 124, 190), white); */
+    display: flex;
+    justify-content: center;
+    padding: 20em 0 20em 0;
     
 }
 
-
 .commitments{
-    display: grid;
-    grid-template-areas:". commimagecare comminfocare ."
-                        ". commimageconversation comminfoconversation ."
-                        ". commimagecommunity comminfocommunity .";
-
-    grid-template-columns: 15% 35% 35% 15%;
-    grid-auto-rows: auto;
-
+    display: flex;
+    flex-direction: column;
 }
 
-.commimagecare{
-    grid-area: commimagecare;
+.commitment{
+    display: flex;
+    flex-direction: row;
+    transition: all 0.4s ease;
 }
 
-.commimageconversation{
-    grid-area: commimageconversation;
-}
-
-.commimagecommunity{
-    grid-area: commimagecommunity;
-}
-
-.commitmentinfocare{
-    grid-area: comminfocare;
-}
-
-.commitmentinfoconversation{
-    grid-area: comminfoconversation;
-}
-
-.commitmentinfocommunity{
-    grid-area: comminfocommunity;
-}
-
-
-.commimage{
-    object-fit: cover;
-    object-position: center;
+.commitment:hover{
+    transform: scale(1.05);
 }
 
 .commitmentinfo{
-    background-color: gray;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
+.commitmentinfo > *{
+    margin-right: 110px;
+    margin-left: 110px;
+}
 
+.commitmentinfo > h1{
+    font-size: 1.7em;
+    margin-top: 0;
+}
 
+.commitmentinfo > p{
+    font-size: 1.2em;
+}
+
+.commitmentinfo > a{
+    font-size: 1em;
+    text-decoration: none;
+    color: black;
+    padding: 8px 15px 8px 15px;
+    background-color: rgb(255, 237, 154);
+    text-transform: uppercase;
+    border-top-right-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.commitmentinfo > a:hover{
+    background-color: rgb(219, 185, 35) ;
+}
+
+.commimage{
+    width: 30vw;
+}
+
+.commitmentinfocare{
+    background-color: rgb(209, 235, 236);
+}
+
+.commitmentinfoconversation{
+    background-color: rgb(86, 165, 70);
+}
+
+.commitmentinfocommunity{
+    background-color: rgb(209, 235, 236);
+}
 
 
 
