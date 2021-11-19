@@ -117,9 +117,10 @@
             </div>
         </div>
 
-        <div class="map">
-
+        <div class="mappart">
+            <div id="map"></div>
         </div>
+        
 
         <div class="donate container">
 
@@ -133,29 +134,53 @@
 
 
 
-
-
 <!-- https://www.lpzoo.org/about-the-zoo/ -->
 
-    <script>
-        var slideIndex = 0;
-        carousel();
+<script>
+    var slideIndex = 0;
+    carousel();
 
-        function carousel() {
-          var i;
-          var slides = document.getElementsByClassName("slide");
+    function carousel() {
+        var i;
+        var slides = document.getElementsByClassName("slide");
 
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}    
-
-          slides[slideIndex-1].style.display = "block";  
-
-          setTimeout(carousel, 6000); // Change image every 6 seconds
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
         }
-    </script>
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+
+        slides[slideIndex-1].style.display = "block";  
+
+        setTimeout(carousel, 6000); // Change image every 6 seconds
+    }
+</script>
+
+
+
+<!-- MAP -->
+<script>
+    function initMap(){
+        var options = {
+            zoom:13,
+            center: {lat: 39.007504, lng: -94.529625},
+        }
+
+        var map = new google.maps.Map(document.getElementById("map"), options)
+
+        var marker = new google.maps.Marker({
+            position:{lat: 39.007504, lng: -94.529625},
+            map: map
+        })
+    }
+</script>
+
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqjj2LbMuIFJBr1Y-XlqwDAd4sUW13VNI&callback=initMap"
+></script>
+
+
+
 
 </body>
 </html>

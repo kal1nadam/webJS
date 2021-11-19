@@ -207,10 +207,11 @@ nav li:first-child a{
 
 .second{
     background-color: rgb(8, 124, 190);
-    /* background-image: linear-gradient(white, rgb(8, 124, 190), rgb(8, 124, 190), rgb(8, 124, 190), rgb(8, 124, 190), rgb(8, 124, 190) ,rgb(8, 124, 190), white); */
+    /* background-image: linear-gradient(to right, white, rgb(8, 124, 190), rgb(8, 124, 190), rgb(8, 124, 190), rgb(8, 124, 190), rgb(8, 124, 190) ,rgb(8, 124, 190), white); */
     display: flex;
     justify-content: center;
     padding: 20em 0 20em 0;
+    border-top: solid black 5px;
     
 }
 
@@ -226,7 +227,17 @@ nav li:first-child a{
 }
 
 .commitment:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
+}
+
+.commitment:hover img{
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+.commitment:hover .commitmentinfo{
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
 }
 
 .commitmentinfo{
@@ -283,6 +294,37 @@ nav li:first-child a{
 }
 
 
+
+.care img{
+    border-top-left-radius: 1em;
+}
+.care .commitmentinfo{
+    border-top-right-radius: 1em;
+}
+
+.community img{
+    border-bottom-left-radius: 1em;
+}
+
+.community .commitmentinfo{
+    border-bottom-right-radius: 1em;
+}
+
+
+#map{
+    height: 400px;
+    width: 50vw;
+    margin-top: 50px;
+}
+
+.mappart{
+    background-color:rgb(50, 102, 37);
+    /* background-image: linear-gradient(to right, white, rgb(50, 102, 37), rgb(50, 102, 37), rgb(50, 102, 37) ,rgb(50, 102, 37), rgb(50, 102, 37), rgb(50, 102, 37), white); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid black 3px;
+}
 
 
 
