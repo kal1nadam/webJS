@@ -17,7 +17,6 @@
 body{
     margin: 0;
     padding: 0;
-    height: 200em;
 }
 
 html{
@@ -84,11 +83,11 @@ nav li:first-child a{
     background-color: rgb(50, 102, 37);
 }
 
-.donate:hover{
+.gallery:hover{
     background-color: rgb(138, 106, 165);
 }
 
-.gallery:hover{
+.history:hover{
     background-color: rgb(5, 105, 163);
 }
 
@@ -206,18 +205,25 @@ nav li:first-child a{
 
 
 .second{
-    background-color: rgb(8, 124, 190);
-    /* background-image: linear-gradient(to right, white, rgb(8, 124, 190), rgb(8, 124, 190), rgb(8, 124, 190), rgb(8, 124, 190), rgb(8, 124, 190) ,rgb(8, 124, 190), white); */
+    /* background-color: rgb(8, 124, 190); */
+    background-image: linear-gradient( white, rgb(8, 124, 190), rgb(8, 124, 190), rgb(8, 124, 190), rgb(8, 124, 190), rgb(8, 124, 190) ,rgb(8, 124, 190));
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 20em 0 20em 0;
-    border-top: solid black 5px;
+    align-items: center;
+    padding: 10em 0 20em 0;
+    /* border-top: solid black 5px; */
     
+}
+
+.second > h1{
+    font-size: 4em;
 }
 
 .commitments{
     display: flex;
     flex-direction: column;
+    padding-top: 5em;
 }
 
 .commitment{
@@ -312,18 +318,41 @@ nav li:first-child a{
 
 
 #map{
-    height: 400px;
-    width: 50vw;
-    margin-top: 50px;
+    height: 600px;
+    width: 70vw;
+    margin-top: 100px;
+    border-radius: 1em;
+    border: solid black;
+    transition: all 2s ease;
+}
+
+#map:hover{
+    border-color: white;
 }
 
 .mappart{
     background-color:rgb(50, 102, 37);
     /* background-image: linear-gradient(to right, white, rgb(50, 102, 37), rgb(50, 102, 37), rgb(50, 102, 37) ,rgb(50, 102, 37), rgb(50, 102, 37), rgb(50, 102, 37), white); */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-items: center;
     border-top: solid black 3px;
+    padding: 7em 0 10em 0;
+}
+
+.mappart > h1{
+    font-size: 4em;
+    margin-bottom: 0.3em;
+}
+
+.mappart > p{
+    font-size: 1.7em;
+    background-color: rgb(255, 255, 255, 0.2);
+    margin: 0;
+    padding: 1em;
+    border-radius: 1em;
 }
 
 
