@@ -31,6 +31,7 @@ header{
 nav{
     position: -webkit-sticky; 
     position: sticky;
+    z-index: 10000;
     top: 0;
     background-color: rgb(46, 46, 46);
 }
@@ -320,7 +321,7 @@ nav li:first-child a{
 #map{
     height: 600px;
     width: 70vw;
-    margin-top: 100px;
+    margin-top: 80px;
     border-radius: 1em;
     border: solid black;
     transition: all 2s ease;
@@ -344,7 +345,7 @@ nav li:first-child a{
 
 .mappart > h1{
     font-size: 4em;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.5em;
 }
 
 .mappart > p{
@@ -354,6 +355,65 @@ nav li:first-child a{
     padding: 1em;
     border-radius: 1em;
 }
+
+
+
+/* ############ GALERY ############## */
+
+
+.gallerypart{
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 200px;
+    background-color: rgb(138, 106, 165);
+    border-top: solid black 3px;
+}
+
+.gallerypart > h1{
+    font-size: 4em;
+    margin-bottom: 2em;
+}
+
+.gallerybox{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* cursor: grabbing; */
+}
+
+.gallerybox > img{
+    object-fit: cover;
+    object-position: center;
+    height: calc(100vw / 4);
+    width: calc(100vw / 4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gallerybox > img:hover{
+    transform: scale(1.01);
+    border-radius: 10px;
+    
+}
+
+
+#lightbox{
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.8);
+    display: none;
+}
+
+#lightbox.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 

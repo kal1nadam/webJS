@@ -6,6 +6,7 @@
     <title>ZOO</title>
 </head>
 <link rel="stylesheet" href="./main.css">
+
 <body>
     <!-- <header> sticky nav does not work -->
 
@@ -124,8 +125,21 @@
         </div>
         
 
-        <div class="donate container">
+        <div class="gallerypart">
 
+            <h1>Come to see every animal you ever dreamed about </h1>
+
+            <div class="gallerybox">
+                <img id="galimg" src="./images/gal_giraffe.jpg" alt="giraffe">
+                <img id="galimg" src="./images/gal_koala.jpg" alt="koala">
+                <img id="galimg" src="./images/gal_lion.jpg" alt="lion">
+                <img id="galimg" src="./images/gal_monkey.jpg" alt="monkey">
+                <img id="galimg" src="./images/gal_panda.jpg" alt="panda">
+                <img id="galimg" src="./images/gal_weirdo.jpg" alt="have no idea wtf is this">
+                <img id="galimg" src="./images/gal_zebra.jpg" alt="zebra">
+    
+            </div>
+            
         </div>
     </main>
 
@@ -183,7 +197,30 @@
 ></script>
 
 
+<!-- LIGHTBOX -->
+<script>
+    const lightbox = document.createElement("div")
+    lightbox.id = "lightbox"
+    document.body.appendChild(lightbox)
 
+    const images = document.querySelectorAll("#galimg")
+    images.forEach(image => {
+        image.addEventListener("click", e => {
+            lightbox.classList.add("active")
+            const img = document.createElement("img")
+            img.src = image.src
+            while (lightbox.firstChild) {
+                lightbox.removeChild(lightbox.firstChild)
+            }
+            lightbox.appendChild(img)
+        })
+    })
+
+    lightbox.addEventListener("click", e => {
+        if (e.target !== e.currentTarget) return
+        lightbox.classList.remove("active")
+    })
+</script>
 
 </body>
 </html>
