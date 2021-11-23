@@ -457,6 +457,14 @@ nav li:first-child a{
 
 
 
+@media (prefers-reduced-motion: no-preference) {
+    .module {
+      animation: wipe-enter 1s 1;
+    }
+  }
+
+
+
 
 
 
