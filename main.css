@@ -79,21 +79,21 @@ nav li:first-child a{
     border-width: 1px;
 }
 
-.about:hover{
+.about:hover, #aboutactive{
     background-color: rgb(5, 105, 163);
-    color: black;
 }
 
-.map:hover{
+.map:hover, #mapactive{
     background-color: rgb(50, 102, 37);
 }
 
-.gallery:hover{
+.gallery:hover, #galleryactive{
     background-color: rgb(138, 106, 165);
 }
 
-.history:hover{
+.history:hover, #historyactive{
     background-color: rgb(226, 228, 106);
+    color: black;
 }
 
 

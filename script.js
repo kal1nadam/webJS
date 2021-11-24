@@ -10,7 +10,8 @@ function carousel() {
     }
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}    
-    slides[slideIndex-1].style.display = "block";  
+    slides[slideIndex-1].style.display = "block";
+    
     setTimeout(carousel, 6000); // Change image every 6 seconds
 }
 
@@ -57,19 +58,59 @@ lightbox.addEventListener("click", e => {
     lightbox.classList.remove("active")
 })
 
-// SLIDE
-/*
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    const square = entry.target.querySelector('.module');
 
-    if (entry.isIntersecting) {
-      square.classList.add('square-animation');
-	  return; // if we added the class, exit the function
+// SCROLLSPY
+
+
+let about = document.querySelector("#about");
+let map = document.querySelector("#mappart");
+let gallery = document.querySelector("#gallery");
+let history = document.querySelector("#history");
+
+let aboutbutton = document.querySelector(".about")
+let mapbutton = document.querySelector(".map")
+let gallerybutton = document.querySelector(".gallery")
+let historybutton = document.querySelector(".history")
+
+window.addEventListener("scroll", () =>{
+    var windo = window.pageYOffset;
+    if(about.offsetTop <= windo && map.offsetTop - 1 > windo){
+        console.log("about")
+        aboutbutton.setAttribute("id", "aboutactive")
+        mapbutton.removeAttribute("id", "mapactive")
+        gallerybutton.removeAttribute("id", "galleryactive")
+        historybutton.removeAttribute("id", "historyactive")
     }
 
-    // We're not intersecting, so remove the class!
-    square.classList.remove('square-animation');
-  });
-});
-*/
+    else if(map.offsetTop - 1 <= windo && gallery.offsetTop > windo){
+        console.log("map")
+        aboutbutton.removeAttribute("id", "aboutactive")
+        mapbutton.setAttribute("id", "mapactive")
+        gallerybutton.removeAttribute("id", "galleryactive")
+        historybutton.removeAttribute("id", "historyactive")
+    }
+
+    else if(gallery.offsetTop <= windo && history.offsetTop > windo){
+        console.log("gallery")
+        aboutbutton.removeAttribute("id", "aboutactive")
+        mapbutton.removeAttribute("id", "mapactive")
+        gallerybutton.setAttribute("id", "galleryactive")
+        historybutton.removeAttribute("id", "historyactive")
+    }
+
+    else if(history.offsetTop <= windo){
+        console.log("history")
+        aboutbutton.removeAttribute("id", "aboutactive")
+        mapbutton.removeAttribute("id", "mapactive")
+        gallerybutton.removeAttribute("id", "galleryactive")
+        historybutton.setAttribute("id", "historyactive")
+    }
+
+    else{
+        console.log("begin")
+        aboutbutton.removeAttribute("id", "aboutactive")
+        mapbutton.removeAttribute("id", "mapactive")
+        gallerybutton.removeAttribute("id", "galleryactive")
+        historybutton.removeAttribute("id", "historyactive")
+    }
+})
