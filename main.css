@@ -3,6 +3,10 @@
     --nav-height: 60px;
 }
 
+*{
+    scroll-behavior: smooth;
+}
+
 .container{
     display: block;
     margin-left: auto;
